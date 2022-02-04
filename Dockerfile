@@ -5,9 +5,9 @@ LABEL "com.github.actions.description"="Sonarscanner for .NET 6 with pull reques
 LABEL "com.github.actions.icon"="check-square"
 LABEL "com.github.actions.color"="blue"
 
-LABEL "repository"="https://github.com/highbyte/sonarscan-dotnet"
-LABEL "homepage"="https://github.com/highbyte"
-LABEL "maintainer"="Highbyte"
+LABEL "repository"="https://github.com/dakraid/sonarscan-dotnet"
+LABEL "homepage"="https://github.com/dakraid"
+LABEL "maintainer"="Dakraid"
 
 # Version numbers of used software
 ENV SONAR_SCANNER_DOTNET_TOOL_VERSION=5.3.2 \
@@ -31,6 +31,10 @@ RUN apt-get update -y \
 
 # Install Java Runtime for SonarScanner
 RUN apt-get install --no-install-recommends -y openjdk-$JRE_VERSION-jre
+
+# Install Node.js for SonarScanner
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
+    && apt-get install -y nodejs
 
 # Install SonarScanner .NET global tool
 RUN dotnet tool install dotnet-sonarscanner --tool-path . --version $SONAR_SCANNER_DOTNET_TOOL_VERSION
