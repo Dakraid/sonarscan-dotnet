@@ -1,5 +1,7 @@
 # SonarScanner for .NET
-![Docker Image build](https://github.com/highbyte/sonarscan-dotnet/workflows/Docker%20Image%20build/badge.svg)
+![Docker Image build](https://github.com/dakraid/sonarscan-dotnet/workflows/Docker%20Image%20build/badge.svg)
+
+This is a forked version with added support for NodeJS.
 
 SonarScanner for .NET for use in Github Actions, with automatic pull request detection, analysis and decoration.
 
@@ -15,7 +17,7 @@ The current version supports .NET 6
 
 ``` yaml
     - name: SonarScanner for .NET 6 with pull request decoration support
-      uses: highbyte/sonarscan-dotnet@v2.1.2
+      uses: dakraid/sonarscan-dotnet@v2.1.2
       with:
         # The key of the SonarQube project
         sonarProjectKey: your_projectkey
@@ -34,7 +36,7 @@ Also includes test results.
 
 ``` yaml
     - name: SonarScanner for .NET 6 with pull request decoration support
-      uses: highbyte/sonarscan-dotnet@v2.1.2
+      uses: dakraid/sonarscan-dotnet@v2.1.2
       with:
         # The key of the SonarQube project
         sonarProjectKey: your_projectkey
@@ -57,7 +59,7 @@ Also includes test results.
 
 ``` yaml
     - name: SonarScanner for .NET 6 with pull request decoration support
-      uses: highbyte/sonarscan-dotnet@v2.1.2
+      uses: dakraid/sonarscan-dotnet@v2.1.2
       with:
         # The key of the SonarQube project
         sonarProjectKey: your_projectkey
@@ -81,7 +83,7 @@ Also includes test results.
 
 ``` yaml
     - name: SonarScanner for .NET 6 with pull request decoration support
-      uses: highbyte/sonarscan-dotnet@v2.1.2
+      uses: dakraid/sonarscan-dotnet@v2.1.2
       with:
         # The key of the SonarQube project
         sonarProjectKey: your_projectkey
@@ -101,7 +103,7 @@ Also includes test results.
 
 ``` yaml
     - name: SonarScanner for .NET 6 with pull request decoration support
-      uses: highbyte/sonarscan-dotnet@v2.1.2
+      uses: dakraid/sonarscan-dotnet@v2.1.2
       with:
         # The key of the SonarQube project
         sonarProjectKey: your_projectkey
